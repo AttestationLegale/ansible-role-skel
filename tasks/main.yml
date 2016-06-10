@@ -11,9 +11,9 @@
     mode: "{{ item.mode | default(skel_default_directory_mode) }}"
   when: item.state is defined and item.state == 'directory'
   with_flattened:
-    - skel_entries
-    - skel_group_entries
-    - skel_host_entries
+    - "{{ skel_entries }}"
+    - "{{ skel_group_entries }}"
+    - "{{ skel_host_entries }}"
   tags: [configuration,system,skel]
 
 
@@ -28,9 +28,9 @@
     force: "{{ item.force | default(skel_default_link_force) }}"
   when: item.state is defined and item.state == 'link'
   with_flattened:
-    - skel_entries
-    - skel_group_entries
-    - skel_host_entries
+    - "{{ skel_entries }}"
+    - "{{ skel_group_entries }}"
+    - "{{ skel_host_entries }}"
   tags: [configuration,system,skel]
 
 
@@ -43,9 +43,9 @@
     mode: "{{ item.mode | default(skel_default_file_mode) }}"
   when: item.state is defined and item.state == 'copy'
   with_flattened:
-    - skel_entries
-    - skel_group_entries
-    - skel_host_entries
+    - "{{ skel_entries }}"
+    - "{{ skel_group_entries }}"
+    - "{{ skel_host_entries }}"
   tags: [configuration,system,skel]
 
 
@@ -58,7 +58,7 @@
     mode: "{{ item.mode | default(skel_default_file_mode) }}"
   when: item.state is defined and item.state == 'template'
   with_flattened:
-    - skel_entries
-    - skel_group_entries
-    - skel_host_entries
+    - "{{ skel_entries }}"
+    - "{{ skel_group_entries }}"
+    - "{{ skel_host_entries }}"
   tags: [configuration,system,skel]

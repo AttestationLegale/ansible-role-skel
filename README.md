@@ -36,10 +36,10 @@ None
   - hosts: all
     roles:
       - skel
-     vars:
-       skel_entries:
-         - path: /etc/skel/.ssh
-           state: directory
+    vars:
+      skel_entries:
+        - path: /etc/skel/.ssh
+          state: directory
 ```
 
 ## License
