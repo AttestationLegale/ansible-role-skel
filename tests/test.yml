@@ -5,6 +5,7 @@
   vars:
     - skel_entries:
       - path: "/etc/skel/.ssh"
+        mode: "0700"
         state: "directory"
       - path: "/etc/skel/passwd"
         src: "/etc/passwd"
