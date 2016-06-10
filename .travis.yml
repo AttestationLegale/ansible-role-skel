@@ -62,5 +62,5 @@ script:
     && (echo '/etc/skel/bar is a file - pass' && exit 0)
     || (echo '/etc/skel/bar doe not exist or is not a file - fail' && exit 1)
 
-#notifications:
-#  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
