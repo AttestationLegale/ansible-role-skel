@@ -1,0 +1,16 @@
+---
+
+# Defaults vars file for skel role
+
+skel_default_owner: 'root'
+skel_default_group: 'root'
+skel_default_directory_mode: '0750'
+skel_default_file_mode: '0640'
+
+skel_default_link_force: False
+skel_default_link_mode: '0640'
+skel_default_link_state: 'link'
+
+skel_entries: []
+skel_group_entries: []
+skel_host_entries: []

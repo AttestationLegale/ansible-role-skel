@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  remote_user: root
+
+  vars:
+    - skel_entries:
+      - path: "/etc/skel/.ssh"
+        state: "directory"
+      - path: "/etc/skel/passwd"
+        src: "/etc/passwd"
+        state: "link"
+      - path: "/etc/skel/foo"
+        src: "./files/foo"
+        state: "copy"
+      - path: "/etc/skel/bar"
+        src: "./templates/bar.j2"
+        state: "template"
+
+  roles:
+    - ansible-role-skel
