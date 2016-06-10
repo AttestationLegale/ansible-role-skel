@@ -39,7 +39,7 @@ script:
 
   # Check if /etc/skel/.ssh mode is 0700.
   - >
-    ls -dl /etc/skel
+    ls -dl /etc/skel/.ssh
     | awk '{ print $1; }' | grep -q "^drwx------$"
     && (echo '/etc/skel/.ssh mode = 0700 - pass' && exit 0)
     || (echo '/etc/skel/.ssh mode != 0700 - fail' && exit 1)
